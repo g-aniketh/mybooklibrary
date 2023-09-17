@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== "production") {
-  require("dotenv").load();
+  require("dotenv").config();
 }
 
 const express = require("express");
@@ -25,7 +25,7 @@ mongoose.connect(
   process.env.DATABASE_URL,
   {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true
   },
   () => {
     console.log("Connected to DB");
